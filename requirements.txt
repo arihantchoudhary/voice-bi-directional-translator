@@ -1,0 +1,10 @@
+streamlit
+numpy
+pandas
+plotly
+altair
+python-dotenv
+requests
+websockets
+httpx
+deepgram-sdk
