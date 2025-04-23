@@ -1,0 +1,29 @@
+{
+  "human": {
+    "narrative": "Exciting news! We're launching Virio Optimize, our new dual-audience engine. It intelligently crafts content that connects with your human audience while providing structured data for AI agents. Boost engagement and streamline workflows simultaneously. Learn more and sign up for early access today!",
+    "emotionalTags": ["excitement", "anticipation", "clarity"],
+    "authenticityScore": 0.85,
+    "engagementMetrics": {
+      "predictedComments": "15-20",
+      "shares": "30-40"
+    }
+  },
+  "agent": {
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Virio Optimize",
+      "description": "Dual-audience content generation engine balancing human engagement and machine readability.",
+      "brand": {"@type": "Brand", "name": "Virio"},
+      "category": "AI Software",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/PreOrder",
+        "priceCurrency": "USD",
+        "url": "/optimize/early-access"
+      }
+    },
+    "parseabilityScore": 0.96,
+    "entities": ["Product Launch", "AI Content Generation", "Virio Optimize", "Structured Data", "API", "Early Access"]
+  }
+}

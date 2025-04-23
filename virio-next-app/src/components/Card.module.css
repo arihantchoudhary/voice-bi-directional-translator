@@ -1,0 +1,57 @@
+/* Card.module.css - Revised for Clean AI Startup Look */
+
+.card {
+  background-color: rgb(var(--card-background-rgb)); /* Use variable */
+  border-radius: 12px; /* Match section radius */
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow); /* Use variable */
+  border: 1px solid rgba(var(--border-rgb), 0.1); /* Subtle border */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-4px); /* Slightly less lift */
+  /* Slightly stronger shadow on hover */
+  box-shadow: 0 10px 15px -3px rgba(var(--shadow-color), var(--shadow-strength)), 0 4px 6px -4px rgba(var(--shadow-color), var(--shadow-strength));
+}
+
+.cardIcon {
+  font-size: 2rem; /* Slightly smaller icon */
+  margin-bottom: 1rem;
+  /* Icons might need specific color if they aren't text */
+  color: rgb(var(--primary-rgb)); /* Example: Use primary color */
+}
+
+/* Targeting h3 within card */
+.card h3 {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: rgb(var(--foreground-rgb));
+  margin-bottom: 0.5rem;
+}
+
+/* Targeting p within card */
+.card p {
+  font-size: 0.875rem; /* 14px */
+  color: rgb(var(--muted-foreground-rgb)); /* Muted color for description */
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* No responsive styles needed specifically for the card itself usually */
+/* Container styles are in page.module.css */
+
+/* --- Animation Styles --- */
+.cardAnimate {
+  opacity: 0;
+  transform: translateY(15px); /* Slightly less vertical movement */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  /* Add a delay based on potential index later if needed */
+  /* transition-delay: calc(var(--card-index, 0) * 100ms); */
+}
+
+.cardAnimateVisible {
+  opacity: 1;
+  transform: translateY(0);
+}

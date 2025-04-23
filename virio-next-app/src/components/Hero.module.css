@@ -1,0 +1,56 @@
+/* Hero.module.css - Revised for Clean AI Startup Look */
+
+.hero {
+  /* Simpler background, maybe slightly off-white in light mode */
+  background-color: rgb(var(--background-end-rgb)); /* Use the end gradient color */
+  padding: 5rem 0; /* Increase padding slightly */
+  text-align: center;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.1); /* Subtle separator */
+}
+
+/* Targeting h1 within hero */
+.hero h1 {
+  font-size: 2.5rem; /* Adjust size if needed */
+  font-weight: 700; /* Bold */
+  color: rgb(var(--foreground-rgb));
+  max-width: 900px; /* Allow slightly wider text */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  line-height: 1.2; /* Tighter line height for large headings */
+}
+
+/* Targeting p within hero (subtitle) */
+.hero p {
+  font-size: 1.125rem; /* 18px */
+  color: rgb(var(--muted-foreground-rgb)); /* Use muted color */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  opacity: 1; /* Reset opacity from global p style if needed */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+   .hero p {
+    font-size: 0.95rem;
+  }
+}

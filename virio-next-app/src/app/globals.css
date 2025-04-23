@@ -1,0 +1,95 @@
+/* globals.css - Revised for Clean AI Startup Look */
+@import "tailwindcss";
+
+:root {
+  /* Light Mode */
+  --background-start-rgb: 255, 255, 255; /* White */
+  --background-end-rgb: 248, 249, 250; /* Off-white */
+  --foreground-rgb: 17, 24, 39; /* Near Black */
+  --muted-foreground-rgb: 107, 114, 128; /* Gray */
+  --primary-rgb: 79, 70, 229; /* Indigo */
+  --border-rgb: 229, 231, 235; /* Light Gray */
+  --card-background-rgb: 255, 255, 255; /* White */
+  --shadow-color: 0, 0, 0; /* Black for shadows */
+  --shadow-strength: 0.1;
+  --card-shadow: 0 4px 6px -1px rgba(var(--shadow-color), var(--shadow-strength)), 0 2px 4px -2px rgba(var(--shadow-color), var(--shadow-strength));
+  --header-shadow: 0 1px 3px 0 rgba(var(--shadow-color), var(--shadow-strength)), 0 1px 2px -1px rgba(var(--shadow-color), var(--shadow-strength));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark Mode */
+    --background-start-rgb: 17, 24, 39; /* Dark Gray/Near Black */
+    --background-end-rgb: 17, 24, 39;
+    --foreground-rgb: 248, 249, 250; /* Off-white */
+    --muted-foreground-rgb: 156, 163, 175; /* Lighter Gray */
+    --primary-rgb: 99, 102, 241; /* Lighter Indigo */
+    --border-rgb: 55, 65, 81; /* Darker Gray */
+    --card-background-rgb: 31, 41, 55; /* Dark Gray */
+    --shadow-color: 0, 0, 0; /* Black for shadows */
+    --shadow-strength: 0.2; /* Slightly stronger shadow in dark mode */
+  }
+}
+
+/* Apply Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base element styling */
+body {
+  color: rgb(var(--foreground-rgb));
+  /* Use a subtle gradient or solid color */
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  /* Use Inter font defined in layout.tsx */
+  font-family: var(--font-inter), sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* Keep headings clean, maybe slightly bolder */
+  font-weight: 600; /* Semibold */
+  margin-bottom: 0.75em; /* Adjust spacing */
+  line-height: 1.3;
+  color: rgb(var(--foreground-rgb)); /* Ensure headings use main text color */
+}
+
+h1 { font-size: 2.25rem; } /* 36px */
+h2 { font-size: 1.875rem; } /* 30px */
+h3 { font-size: 1.5rem; } /* 24px */
+h4 { font-size: 1.25rem; } /* 20px */
+
+p {
+  margin-bottom: 1rem;
+  color: rgb(var(--foreground-rgb));
+  opacity: 0.9; /* Slightly less prominent than headings */
+}
+
+a {
+  color: rgb(var(--primary-rgb));
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline; /* Add underline on hover for clarity */
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 0; /* Tailwind might reset this, ensure it's 0 */
+}
+ul { list-style-type: disc; }
+ol { list-style-type: decimal; }
+
+/* Base UI Portal Root Style - Keep this */
+.root {
+  isolation: isolate;
+}

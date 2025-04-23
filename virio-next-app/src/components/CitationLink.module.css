@@ -1,0 +1,28 @@
+/* CitationLink.module.css */
+
+.citationLink {
+  font-size: 0.75em; /* Make citations slightly smaller */
+  vertical-align: super; /* Align superscript style */
+  margin-left: 2px;
+  margin-right: 2px;
+  color: rgb(var(--primary-rgb)); /* Use primary color */
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 1px 2px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.citationLink:hover {
+  background-color: rgba(var(--primary-rgb), 0.1); /* Subtle background on hover */
+  color: rgb(var(--primary-rgb)); /* Ensure color remains */
+  text-decoration: none; /* Override global link hover */
+}
+
+.citationMissing {
+  font-size: 0.75em;
+  vertical-align: super;
+  margin-left: 2px;
+  margin-right: 2px;
+  color: rgb(var(--muted-foreground-rgb)); /* Muted color for missing links */
+  cursor: default; /* Indicate it's not clickable */
+}

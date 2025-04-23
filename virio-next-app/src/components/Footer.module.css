@@ -1,0 +1,20 @@
+/* Footer.module.css - Revised for Clean AI Startup Look */
+
+.footer {
+  background-color: rgb(var(--background-start-rgb)); /* Match body background */
+  color: rgb(var(--muted-foreground-rgb)); /* Muted text color */
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 4rem; /* Ensure enough space above footer */
+  border-top: 1px solid rgba(var(--border-rgb), 0.1); /* Subtle top border */
+  font-size: 0.875rem; /* 14px */
+}
+
+.container {
+  /* Container component handles max-width and padding */
+  /* No specific overrides needed here */
+}
+
+.footer p {
+  margin-bottom: 0;
+}

@@ -1,0 +1,59 @@
+/* Section.module.css - Revised for Clean AI Startup Look */
+
+.section {
+  margin-bottom: 4rem;
+  /* Adjust scroll margin based on new header height (4rem = 64px) */
+  scroll-margin-top: 5rem; /* 64px header + some buffer */
+}
+
+/* Targeting h2 (section title) */
+.section h2 {
+  font-size: 1.75rem; /* Slightly smaller section titles */
+  font-weight: 600;
+  color: rgb(var(--foreground-rgb));
+  margin-bottom: 1.5rem; /* Space below title */
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.5); /* Lighter border */
+}
+
+.content {
+  background-color: rgb(var(--card-background-rgb)); /* Use card background color */
+  padding: 2rem;
+  border-radius: 12px; /* Slightly larger radius */
+  box-shadow: var(--card-shadow); /* Use card shadow from globals */
+  border: 1px solid rgba(var(--border-rgb), 0.1); /* Subtle border */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .section {
+    margin-bottom: 3rem;
+  }
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  .content {
+    padding: 1.5rem;
+  }
+}
+
+/* --- Animation Styles --- */
+.sectionAnimate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.sectionAnimateVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+   .section h2 {
+    font-size: 1.375rem;
+  }
+  .content {
+    padding: 1rem;
+  }
+}

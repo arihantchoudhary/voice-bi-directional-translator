@@ -1,0 +1,188 @@
+/* page.module.css - Revised for Clean AI Startup Look */
+
+.mainContainer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cardIcon {
+  /* Style for the div wrapping the icon in the Card component usage */
+  /* Inherits color from Card.module.css now */
+  font-size: 2rem; /* Match icon size in Card.module.css */
+  margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .mainContainer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .cardContainer {
+    grid-template-columns: 1fr; /* Stack cards */
+  }
+}
+
+/* --- Styles for new elements using updated variables --- */
+
+/* Table Styles */
+.tableContainer {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border: 1px solid rgba(var(--border-rgb), 0.2); /* Use border variable */
+  border-radius: 8px;
+  box-shadow: var(--card-shadow); /* Add subtle shadow */
+  background-color: rgb(var(--card-background-rgb)); /* Match card background */
+}
+
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer th,
+.tableContainer td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.2); /* Only bottom borders */
+  vertical-align: top;
+  font-size: 0.9rem; /* Slightly smaller table text */
+}
+/* Remove border from last row */
+.tableContainer tr:last-child td {
+    border-bottom: none;
+}
+
+.tableContainer th {
+  font-weight: 600;
+  color: rgb(var(--foreground-rgb));
+  background-color: rgba(var(--border-rgb), 0.05); /* Very subtle header background */
+}
+
+/* Remove zebra striping for cleaner look */
+/* .tableContainer tbody tr:nth-child(even) { ... } */
+
+/* Code Block Styles */
+.codeBlock {
+  /* Dark background in both light/dark modes for contrast */
+  background-color: #1f2937; /* Tailwind gray-800 */
+  color: #d1d5db; /* Tailwind gray-300 */
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  white-space: pre;
+}
+
+/* Inline code */
+.inlineCode { /* Add this class if needed for `code` tags */
+  background-color: rgba(var(--border-rgb), 0.1);
+  color: rgb(var(--primary-rgb)); /* Use primary color */
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.9em;
+}
+
+
+/* Horizontal Rule */
+.hr {
+  border: none;
+  border-top: 1px solid rgba(var(--border-rgb), 0.2); /* Use border variable */
+  margin: 2.5rem 0; /* More space */
+}
+
+/* Checklist Styles */
+.checklist {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  color: rgb(var(--muted-foreground-rgb)); /* Muted color */
+}
+
+.checklist li {
+  margin-bottom: 0.5rem;
+  /* Keep simple text format */
+}
+
+/* SVG Diagram Styles */
+.svgDiagram {
+  margin: 2rem auto; /* Center and add vertical margin */
+  max-width: 800px; /* Limit width */
+  width: 100%;
+  background-color: rgb(var(--card-background-rgb)); /* Match card background */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(var(--border-rgb), 0.1);
+}
+
+.svgDiagram svg {
+  display: block; /* Remove extra space below SVG */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Memory Architecture Chart Styles */
+.memoryChart {
+  margin: 2rem auto;
+  max-width: 900px;
+  width: 100%;
+  background-color: rgb(var(--card-background-rgb));
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(var(--border-rgb), 0.1);
+}
+
+/* System Architecture Chart Styles */
+.systemChart {
+  margin: 2rem auto;
+  max-width: 1000px;
+  width: 100%;
+  background-color: rgb(var(--card-background-rgb));
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(var(--border-rgb), 0.1);
+}
+
+/* Temporary styles for Memory Layer Details (replace when Tabs work) */
+.memoryLayerDetails {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(var(--border-rgb), 0.2);
+  border-radius: 8px;
+  background-color: rgba(var(--card-background-rgb), 0.5); /* Slightly different background */
+}
+
+.memoryLayerDetails h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: rgb(var(--foreground-rgb));
+}
+
+.memoryLayerDetails ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.memoryLayerDetails li {
+  margin-bottom: 0.5rem;
+  color: rgb(var(--muted-foreground-rgb));
+}
+
+.memoryLayerDetails li strong {
+  color: rgb(var(--foreground-rgb));
+}

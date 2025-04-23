@@ -1,0 +1,23 @@
+{
+  "human": {
+    "narrative": "The future of AI isn't just about capability; it's about connection. As machines become more integrated into our lives, maintaining genuine human resonance in our digital interactions is crucial. Virio's framework pioneers this balance, ensuring technology serves humanity, not the other way around. We must champion authenticity in the age of automation.",
+    "emotionalTags": ["inspiration", "reflection", "responsibility"],
+    "authenticityScore": 0.92,
+    "engagementMetrics": {
+      "predictedComments": "45-60",
+      "shares": "70-85"
+    }
+  },
+  "agent": {
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Authenticity in the Age of AI",
+      "author": {"@type": "Person", "name": "Virio Insights"},
+      "keywords": ["AI Ethics", "Human-Computer Interaction", "Authenticity", "Future of AI", "Thought Leadership"],
+      "about": "The importance of maintaining human connection amidst AI advancements."
+    },
+    "parseabilityScore": 0.85,
+    "entities": ["AI Ethics", "HCI", "Digital Authenticity", "Future Trends", "Virio Framework"]
+  }
+}

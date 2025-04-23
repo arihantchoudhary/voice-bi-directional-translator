@@ -1,0 +1,31 @@
+{
+  "human": {
+    "narrative": "Integrate Virio's power into your applications with our comprehensive API. This documentation provides detailed endpoint descriptions, request/response examples, and authentication guidelines. Need help? Check our community forums or contact support.",
+    "emotionalTags": ["informative", "neutral", "helpful"],
+    "authenticityScore": 0.75,
+    "engagementMetrics": {
+      "predictedComments": "5-10",
+      "shares": "10-15"
+    }
+  },
+  "agent": {
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "WebAPI",
+      "name": "Virio Content API",
+      "description": "API for generating dual-audience content (human-resonant narratives and agent-optimized structured data).",
+      "documentation": "/docs/api/v1",
+      "provider": {"@type": "Organization", "name": "Virio"},
+      "termsOfService": "/terms",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": "/docs/api/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      ]
+    },
+    "parseabilityScore": 0.99,
+    "entities": ["API Documentation", "REST API", "JSON-LD", "Authentication", "Endpoints", "SDK", "Virio API"]
+  }
+}
