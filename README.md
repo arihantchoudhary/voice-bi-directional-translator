@@ -1,4 +1,5 @@
-# Voice Bi-Directional Translator
+# Voice Bi-Directional Translator us
+ing Twilio Bland Deepgram Cartesia and an LLM of your choice
 
 V0: Emergency Call, VAPI is able to find the right technician for the need on call
 V1: Emergency Call, VAPI is able to find and add the right technician for the need to the call
