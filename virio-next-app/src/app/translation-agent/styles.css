@@ -1,0 +1,21 @@
+/* 
+  This file contained TailwindCSS directives (@import, @theme, @layer).
+  In Next.js with the App Router, global styles and Tailwind directives 
+  are typically handled in `src/app/globals.css`. 
+  
+  Component-specific styles can be added here using standard CSS 
+  or CSS Modules (e.g., page.module.css).
+
+  The original content seemed to be configuring Tailwind, which should 
+  already be set up in your `globals.css` and `tailwind.config.js` 
+  if you're using Shadcn UI.
+
+  If you have specific styles for the TranslationAgentPage component, 
+  you can add them here. For example:
+
+  .translation-agent-container {
+    padding: 1rem;
+  } 
+*/
+
+/* Add any specific styles for the translation agent page below */
