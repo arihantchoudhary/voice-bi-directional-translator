@@ -5,6 +5,8 @@ V1: Emergency Call, VAPI is able to find and add the right technician for the ne
 V2: Emegency Call, VAPI is able to find, add, and translate conversations between the right technician and the customer. Flow ==  user speaks, everyone listens, VAPI translates, both people hear, Customer responds, both people hear, VAPI trasnlates back. High accuracy of translation is guaranteed because gpt4o is better than most Machine Translators.
 
 
+bought a number duck vapi
+
 
 A real-time voice translation system that enables seamless communication between people speaking different languages over phone calls.
 
