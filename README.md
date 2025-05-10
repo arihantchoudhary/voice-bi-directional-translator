@@ -140,6 +140,85 @@ DOMAIN_MODEL=home-service  # or logistics
    - User hears in Language A
 5. **Resolution**: Issue is addressed with seamless communication
 
+## Langbase Translation Agent (Next.js + Twilio) Setup
+
+This section details how to run the Langbase-powered translation agent built with Next.js and a separate Twilio voice handling server.
+
+### Prerequisites
+
+- Node.js and npm/yarn
+- Twilio account and phone number
+- Langbase API Key
+- OpenAI API Key
+- Ngrok or similar for local development exposing the Twilio server
+
+### Configuration
+
+1.  **Environment Variables:** Ensure the `.env` file in the project root contains the necessary API keys:
+    ```dotenv
+    # Langbase (Required for API route)
+    LANGBASE_API_KEY=your_langbase_api_key_here 
+
+    # OpenAI (Required for API route)
+    OPENAI_API_KEY=your_openai_api_key_here
+
+    # Twilio credentials (Used by twilio_server.js)
+    TWILIO_ACCOUNT_SID=your_twilio_account_sid
+    TWILIO_AUTH_TOKEN=your_twilio_auth_token
+    TWILIO_PHONE_NUMBER=your_twilio_phone_number
+
+    # Optional: Port for the standalone Twilio server (defaults to 3001)
+    # TWILIO_PORT=3001
+
+    # Optional: Base URL for the Next.js API if twilio_server.js runs separately
+    # NEXT_PUBLIC_API_BASE_URL=http://localhost:3000/api/agent 
+    ```
+    *(Note: The Next.js app (`virio-next-app`) will automatically load `OPENAI_API_KEY` and `LANGBASE_API_KEY` from the root `.env` file if using Next.js 12+)*
+
+2.  **Langbase Memory:** Initialize the Langbase memory (`translation-agent-memory-1746369141115`) with user preferences as described in the original Langbase agent setup instructions. This typically involves running a separate script using the Langbase SDK.
+
+### Installation
+
+1.  **Install Next.js App Dependencies:**
+    ```bash
+    cd virio-next-app
+    npm install 
+    # Optional: Install UI dependencies if not already present
+    # npm install sonner lucide-react 
+    cd .. 
+    ```
+
+2.  **Install Twilio Server Dependencies:**
+    ```bash
+    npm install express twilio node-fetch
+    ```
+
+### Running the Agent
+
+1.  **Start the Next.js Application:**
+    ```bash
+    cd virio-next-app
+    npm run dev 
+    ```
+    *(This usually runs on `http://localhost:3000`)*
+
+2.  **Start the Twilio Server:** In a separate terminal, from the project root directory:
+    ```bash
+    node twilio_server.js
+    ```
+    *(This usually runs on port 3001, as configured in the script or via `TWILIO_PORT` env var)*
+
+3.  **Expose Twilio Server:** Use ngrok to expose the Twilio server's port (e.g., 3001) to the internet:
+    ```bash
+    ngrok http 3001 
+    ```
+
+4.  **Configure Twilio Webhook:** In your Twilio console, configure your Twilio phone number's "A CALL COMES IN" webhook to point to the HTTPS URL provided by ngrok, followed by `/voice`. Example: `https://<your-ngrok-subdomain>.ngrok.io/voice`
+
+5.  **Use the Agent:**
+    *   **Web UI:** Access the Next.js app in your browser (e.g., `http://localhost:3000/translation-agent`) to interact via the chat interface.
+    *   **Phone Call:** Call your configured Twilio phone number. Speak after the prompt, and the `twilio_server.js` will interact with the Next.js API route to provide the translated response.
+
 ## Development
 
 ### Project Structure
